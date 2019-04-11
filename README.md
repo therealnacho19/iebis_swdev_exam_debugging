@@ -1,3 +1,11 @@
+# Bugs fixed:
+
+1. StringBuffer null: the StringBuffer wasn't initiliazed as empty but as null, which collided finally when adding the other letters in the break. word.delete(0, word.length()); fixes that problem and empties the StringBuffer in a better way.
+2. Regular expressions: . was selecting every character on the string, \\. is the correct way to select a dot.
+3. Break: since there wasn't a break after each case in the switch, case 2 as the last one was always selected.
+4. StringBuffer to String: in order to add the letters in the switch I used strings and not StringBuffer again.
+
+
 # iebis_swdev_exam_debugging
 Somebody from administration wanted to create a random phrase generators and created the code that you can find in Main.java for this purpose.
 
